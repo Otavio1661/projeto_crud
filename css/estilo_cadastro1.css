@@ -1,0 +1,132 @@
+
+html, body {
+    overflow: hidden;
+   }
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, rgb(0, 224, 240), rgb(0, 2, 119)90%);
+}
+
+
+#img-logo {
+    width: 250px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+    
+}
+
+#center-vertical {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#menu-cadastro {
+    width: 400px;
+    height: auto;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+
+#ul-cadastro {
+    list-style-type: none;
+    padding: 30px;
+}
+
+.li-cadastro {
+    width: 300px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.li-cadastro-box {
+    width: 35px;
+    height: 15px;
+}
+
+#box-cadastro {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 5px;
+}
+
+label {
+    color: white;
+}
+
+.li-s-casdastro {
+    color: rgba(255, 255, 255, 0.836);
+    margin: 0;
+    margin-top: 20px;
+}
+.li-s-casdastro a {
+    color: rgb(17, 0, 255);
+    text-decoration: none;
+}
+.li-s-casdastro a:hover {
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+}
+
+
+
+#button-cadastro {
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    color:  rgb(1, 0, 58);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#button-cadastro:hover {
+    transition: 0.5s;
+    background: rgb(3, 0, 160);
+    color: white;
+    border: solid 1px white;
+}
+
+
+.rodape{
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+}
+.rodape p{
+    width: 100%;
+    font-size: 11px;
+    position: absolute;
+    bottom: -11px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+
+.rodape:hover {
+    transition: 1s;
+    background-color: gray;
+    color: white;
+}
+
+

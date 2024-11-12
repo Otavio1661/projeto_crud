@@ -1,0 +1,240 @@
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 0, 255), rgb(0, 100, 255), rgb(0, 0, 100) 90%); 
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#menu {
+    width: 100%;
+    height: 100px;   
+    background: rgba(0, 0, 62, 0.2);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+}
+
+#img_home {
+    position: absolute;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#usuario_d_login {
+    position: absolute;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#usuario_d_login img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+#usuario_d_login h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: 2px solid wheat;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#usuario_d_login h1:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+#usuario_d_login a {
+    color: white;
+    text-decoration: none ;
+}
+
+#img-logo {
+    width: 250px;
+}
+
+#center-vertical {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-cadastro {
+    width: 480px;
+    height: auto;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+
+#ul-cadastro {
+    list-style-type: none;
+    padding: 30px;
+}
+
+.li-cadastro {
+    width: 400px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.li-cadastro-box {
+    width: 35px;
+    height: 15px;
+}
+
+#box-cadastro {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 5px;
+}
+
+label {
+    color: white;
+}
+
+#selecao_uf {
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+
+#selecao_uf p{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#li-select {
+    
+    width: 200px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+
+.li-cadastro-cidade {
+    width: 260px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.li-cadastro-bairro {
+    width: 120px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.li-cadastro-rua {
+    width: 320px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.li-cadastro-nu {
+    width: 50px;
+    height: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+#button-cadastro {
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(1, 0, 58);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#button-cadastro:hover {
+    transition: 0.5s;
+    background: rgb(3, 0, 160);
+    color: white;
+    border: solid 1px white;
+}
+
+.rodape {
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+}
+
+.rodape p {
+    width: 100%;
+    font-size: 11px;
+    position: absolute;
+    bottom: -11px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.rodape:hover {
+    transition: 1s;
+    background-color: gray;
+    color: white;
+}
