@@ -176,7 +176,7 @@ label {
 }
 
 .li-cadastro-rua {
-    width: 320px;
+    width: 305px;
     height: 35px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -187,7 +187,7 @@ label {
 }
 
 .li-cadastro-nu {
-    width: 50px;
+    width: 65px;
     height: 35px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -196,6 +196,10 @@ label {
     border: none;
     outline: none;
 }
+
+input:disabled {
+    background: #ffffff;
+  }
 
 #button-cadastro {
     width: 200px;

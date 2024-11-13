@@ -4,7 +4,7 @@ session_start();
 include('./php/config.php');
 
     $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_cnpj'] . "'";
-    // echo '<pre>$sql<br />'; var_dump($sql); echo '</pre>';
+    //echo '<pre>$sql<br />'; var_dump($sql); echo '</pre>';die;
     $result = $connect->query($sql);
     $user_data = mysqli_fetch_assoc($result);
     // TESTE 
@@ -34,7 +34,7 @@ include('./php/config.php');
         </div>
         
             <div id="usuario_d_login">
-                <img src="./img/login.svg" alt=""> <h1>Perfil: <? echo $user_data['usuario'] ?> </h1>
+                <img src="./img/login.svg" alt=""> <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
             </div>
 
         <div>
@@ -62,10 +62,12 @@ include('./php/config.php');
                     <p>Central do cliente</p>
                 </div>
             </a>
+            <a href="./dados_representante.php">
             <div class="img-home">
                 <img src="./img/dados-ps.png" alt="">
                 <p>Dados do Representante</p>
             </div>
+            </a>
             <div class="img-home">
                 <img src="./img/compras.png" alt="">
                 <p>Vendas</p>

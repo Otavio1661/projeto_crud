@@ -86,7 +86,7 @@ if (isset($_POST["formulario"])) {
                             <input type="hidden" name="formulario" value="cadastrar-usuario">
                     <ul id="ul-cadastro">
                         <li >
-                            <input class="li-cadastro" type="text" placeholder="Nome de usuário" name="usuario" required>
+                            <input class="li-cadastro" type="text" placeholder="Nome representante" name="usuario" required>
                         </li>                       
                         <li >                       
                             <input class="li-cadastro" type="email" placeholder="E-mail" name="email" required>
