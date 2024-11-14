@@ -1,5 +1,5 @@
 html, body {
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
    }
@@ -32,7 +32,6 @@ body {
     background: rgba(0, 0, 62, 0.2);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
-    position: fixed;
 }
 
 #img_home {
@@ -41,6 +40,7 @@ body {
     display: flex;
     align-items: center;
     height: 100px;
+    cursor: pointer;
 }
 
 #usuario_d_login {
@@ -49,6 +49,7 @@ body {
     display: flex;
     align-items: center;
     height: 100px;
+    cursor: pointer;
 }
 
 #usuario_d_login img{
@@ -60,27 +61,8 @@ body {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-right: 5px;
 }
 
-#usuario_d_login h2 {
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
-border: 2px solid wheat;
-padding: 5px 10px;
-border-radius: 5px;
-}
-
-#usuario_d_login h2:hover {
-    transition: 0.3s;
-    transform: scale(1.1);
-}
-
-#usuario_d_login a {
-    color: white;
-    text-decoration: none ;
-}
 
 #img-logo {
     width: 250px;
@@ -90,95 +72,54 @@ border-radius: 5px;
 
 section {
     width: 100%;
-    height: 55%;
+    height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 190px;
 }
 
+section img {
+    width: 100px;
+    filter: invert(1);
 
-#tabela {
-    width: 85%;
-    min-width: 1100px;
-    border-collapse: collapse;
-    border: 1px solid #ededed;
-    color: rgb(229, 229, 229);
-    text-align: center;
-    background: rgb(0, 0, 50);
 }
 
-#titulo {
-    background: blue;
-    height: 50px;
-}
-
-input {
+#marge {
     width: 100%;
-    height: 40px;
-    text-align: center;
-    background: none;
-    color: wheat;
-    border: none;
-    outline: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-
-.excluir {
-    height: 15px;
+#marge a {
+    text-decoration: none;
 }
 
-.w150 {
-    width: 150px;
-}
-
-.w105 {
-    width: 105px;
-}
-
-.w80 {
-    width: 80px;
-}
-
-tr {
-    border-bottom: 1px solid rgb(255, 255, 255) ;
-}
-
-#li-select {   
-    width: 50px;
-    height: 30px;
+.img-home {
+    width: 170px;
+    height: 160px;
+    padding-top: 10px;
+    margin: 20px;
     border-radius: 10px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-}
-
-#salvar {
-    position: absolute;
-    right: 0;
-    top: 180px;
-    right: 5px;
-}
-
-#salvar input {
-    width: 60;
-    height: 30px;
+    border: solid 2px white;    
     text-align: center;
-    background: none;
-    color: wheat;
-    border: 1px solid white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-style: oblique;
+
+    background: linear-gradient(45deg, rgb(0, 0, 50)25%,rgb(0, 0, 255), rgb(0, 0, 50)75%);
+    background-size: 300% 300%;
+    animation: colors 8s ease infinite;
 }
 
-#salvar input:hover {
-    transition: 0.5s;
-    font-weight: bold;
-    background: rgb(0, 223, 0);
-    border: 2px solid white;
+.img-home p {
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+
+.img-home:hover {
+    cursor: pointer;
+    transition: 0.3s;
     transform: scale(1.1);
-    
 }
 
 .rodape{

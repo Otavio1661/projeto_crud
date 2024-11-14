@@ -4,10 +4,10 @@ include('./php/config.php');
 
 
 $sql = "SELECT * FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_cnpj'] . "'";
-    // echo '<pre>$sql<br />'; var_dump($sql); echo '</pre>';
+
     $result = $connect->query($sql);
     $user_data = mysqli_fetch_assoc($result);
-// Usar $_POST para acessar o parâmetro "formulario"
+
 if (isset($_POST["UPDATE_formulario"])) {
 // echo 'aki 1'; exit; 
     switch ($_POST["UPDATE_formulario"]) {

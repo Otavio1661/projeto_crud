@@ -1,14 +1,14 @@
-<?php 
+<?php
 session_start();
 
 include('./php/config.php');
 
-    $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_cnpj'] . "'";
-    //echo '<pre>$sql<br />'; var_dump($sql); echo '</pre>';die;
-    $result = $connect->query($sql);
-    $user_data = mysqli_fetch_assoc($result);
-    // TESTE 
-    // echo '<pre>$user_data<br />'; var_dump($user_data['usuario']); echo '</pre>';
+$sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_cnpj'] . "'";
+//echo '<pre>$sql<br />'; var_dump($sql); echo '</pre>';die;
+$result = $connect->query($sql);
+$user_data = mysqli_fetch_assoc($result);
+// TESTE 
+// echo '<pre>$user_data<br />'; var_dump($user_data['usuario']); echo '</pre>';
 
 ?>
 
@@ -16,14 +16,19 @@ include('./php/config.php');
 
 <!DOCTYPE html>
 <html lang="br-pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./estilo.js" type="text/javascript" defer></script>
-    <link rel="stylesheet" href="./css/home4.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
     <title>Home Gazin</title>
 </head>
+
 <body>
 
     <!-- menu -->
@@ -32,14 +37,15 @@ include('./php/config.php');
         <div id="img_home">
             <img src="./img/logo-gazin.png" id="img-logo">
         </div>
-        
-            <div id="usuario_d_login">
-                <img src="./img/login.svg" alt=""> <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
-            </div>
+
+        <div id="usuario_d_login">
+            <img src="./img/login.svg" alt="" onclick='sair();'>
+            <h1 onclick='sair();'>Perfil: <?php echo $user_data['usuario'] ?> </h1>
+        </div>
 
         <div>
 
-            
+
 
         </div>
     </header>
@@ -48,8 +54,8 @@ include('./php/config.php');
 
     <!-- home -->
 
-    <section> 
-        <div id="marge">    
+    <section>
+        <div id="marge">
             <a href="./dd_cliente.php">
                 <div class="img-home">
                     <img src="./img/cadastro.png" alt="">
@@ -63,10 +69,10 @@ include('./php/config.php');
                 </div>
             </a>
             <a href="./dados_representante.php">
-            <div class="img-home">
-                <img src="./img/dados-ps.png" alt="">
-                <p>Dados do Representante</p>
-            </div>
+                <div class="img-home">
+                    <img src="./img/dados-ps.png" alt="">
+                    <p>Dados do Representante</p>
+                </div>
             </a>
             <div class="img-home">
                 <img src="./img/compras.png" alt="">
@@ -97,6 +103,16 @@ include('./php/config.php');
     </footer>
 
     <!-- /rodape -->
+    <script>
+        function index() {
+            window.location(index.php);
+        }
+
+        function sair() {
+            swal("REALMENTE DESEJA SAIR?", "'Sim' para continuar, se não 'Cancelar' ", "");
+        }
+    </script>
 
 </body>
+
 </html>
