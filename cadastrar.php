@@ -109,7 +109,7 @@ if (isset($_POST["formulario"])) {
                         <div id="box-cadastro">
                             <li>
                                 <input class="li-cadastro-box" type="radio" value="Homem" name="genero" required>
-                                <label>Home</label>
+                                <label>Homem</label>
                             
                                 <input class="li-cadastro-box" type="radio" value="Mulher" name="genero" required>
                                 <label>Mulher</label>

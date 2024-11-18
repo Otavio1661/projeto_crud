@@ -33,6 +33,8 @@ body {
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     position: fixed;
+    display: flex;
+    justify-content: center;
 }
 
 #img_home {
@@ -97,6 +99,49 @@ section {
     margin-top: 190px;
 }
 
+form {
+    margin: 0;
+    padding: 0;
+}
+
+#div_pesquisa{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+
+}
+
+#div_pesquisa input {
+    background: white;
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    border-radius: 10px;
+    color: black;
+    margin-right: -6px;
+}
+
+#div_pesquisa #botao {
+    background: url(../img/pesquisa.svg) no-repeat yellow;
+    filter: invert(1);
+    width: 50px;
+    height: 33px;
+    margin: 0;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    cursor: pointer;
+    border: 4px solid yellow;
+    margin-left: -6px;
+}
+
+#div_pesquisa #botao:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    border: 4px solid yellow;
+    border-radius: 10px;
+}
 
 #tabela {
     width: 85%;

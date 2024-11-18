@@ -101,37 +101,8 @@ $return_data = mysqli_fetch_assoc($res);
 $res = $connect->query($sql);
 }
 
+
 ?>
-
-<!-- <script>
-
-const inputBusca = document.getElementById('input-busca');
-const tabelaFuncionarios = document.getElementById('tabela');
-
-inputBusca.addEventListener('keyup', () => {
-    let expressao = inputBusca.value;
-
-    let linhas = tabelaFuncionarios.getElementsByTagName('tr');
-
-    console.log(linhas)
-    for (let posicao in linhas){
-        if (true === isNaN(posicao)) {
-            continue;
-        }
-
-        let conteudoDalinha = linhas[posicao].innerHTML;
-
-        if (true === conteudoDalinha.includes(expressao)) {
-            linhas[posicao].style.display = '';
-        } else {
-            linhas[posicao].style.display = 'none';
-        }
-    }
-});
-
-</script> -->
-
-
 
 <!DOCTYPE html>
 <html lang="br-pt">
@@ -177,20 +148,13 @@ inputBusca.addEventListener('keyup', () => {
                 
         <table id="tabela">
             <tr id="titulo">
-                <td>ID cliente</td>
-                <td class="w105">Representante</td>
-                <td class="w105">Nome do cliente</td>
-                <td class="w150">E-mail</td>
-                <td class="w105">Telefone</td>
-                <td class="w105">CPF/CNPJ</td>
-                <td class="w80">Estado do cliente</td>
-                <td>Cidade</td>
-                <td>Bairro</td>
-                <td>Endereço do cliente</td>
-                <td>Nº</td>
-                <td>Genero</td>
-                <td class="w80">EXCLUIR</td>
-                <td class="w80">SALVAR</td>
+                <td>ID</td>
+                <td>Produto</td>
+                <td>Categoria</td>
+                <td>Numero interno</td>
+                <td>Val. d. custo</td>
+                <td>Valor d. venda</td>
+                <td>Und. estoque</td>
             </tr>
 
 
@@ -204,48 +168,13 @@ inputBusca.addEventListener('keyup', () => {
 <form action="central_cliente.php" id="cadastrar_cliente" method="POST">
                         <input type="hidden" name="UPDATE_formulario" value="cadastrar_cliente"><br>
 
-                        <td> <input class="center" type="tel" value="<?php echo $row['id']; ?>" name="id"> </td>
-                        <td> <input class="center" type="text" value="<?php echo $row['representante']; ?>" disabled> </td>
-                        <td> <input class="center" type="text" value="<?php echo $row['cliente']; ?>" name="cliente"> </td>
-                        <td> <input class="left" type="email" value="<?php echo $row['email']; ?>" name="email"> </td>
-                        <td> <input class="left CLL" type="tel" value="<?php echo $row['telefone']; ?>" name="telefone"> </td>
-                        <td> <input class="left CPF" type="tel" value="<?php echo $row['cpf_cnpj_cliente']; ?>" disabled> </td>
-                        <td> <select class="center" id="li-select" name="uf">
-                                <option value="<?php echo $row['uf']; ?>"><?php echo $row['uf']; ?></option>
-                                <option value="AC">AC</option>
-                                <option value="AL">AL</option>
-                                <option value="AP">AP</option>
-                                <option value="AM">AM</option>
-                                <option value="BA">BA</option>
-                                <option value="CE">CE</option>
-                                <option value="DF">DF</option>
-                                <option value="ES">ES</option>
-                                <option value="GO">GO</option>
-                                <option value="MA">MA</option>
-                                <option value="MS">MS</option>
-                                <option value="MT">MT</option>
-                                <option value="MG">MG</option>
-                                <option value="PA">PA</option>
-                                <option value="PB">PB</option>
-                                <option value="PR">PR</option>
-                                <option value="PE">PE</option>
-                                <option value="PI">PI</option>
-                                <option value="RJ">RJ</option>
-                                <option value="RN">RN</option>
-                                <option value="RS">RS</option>
-                                <option value="RO">RO</option>
-                                <option value="RR">RR</option>
-                                <option value="SC">SC</option>
-                                <option value="SP">SP</option>
-                                <option value="SE">SE</option>
-                                <option value="TO">TO</option>
-                            </select> </td>
-                        <td> <input class="left" type="text" value="<?php echo $row['cidade']; ?>" name="cidade"> </td>
-                        <td> <input class="left" type="text" value="<?php echo $row['bairro']; ?>" name="bairro"> </td>
-                        <td> <input class="left" type="text" value="<?php echo $row['rua_av']; ?>" name="rua_av"> </td>
-                        <td> <input class="left" type="tel" value="<?php echo $row['nu']; ?>" name="nu"> </td>
-                        <td> <input class="center" type="text" value="<?php echo $row['genero']; ?>"> </td>
-                        <td> <input class="center excluir" type='checkbox' name="EXCLUIR"> </td> 
+                        <td> <input> </td>
+                        <td> <input> </td>
+                        <td> <input> </td>
+                        <td> <input> </td>
+                        <td> <input> </td>
+                        <td> <input> </td>
+                        <td> <input> </td>
                         <td><button type="submit" id="salvar" name="submit">SALVAR</button></td> 
 
                         <input type="hidden" name="UPDATE_formulario" value="cadastrar_cliente">

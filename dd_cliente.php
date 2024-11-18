@@ -62,14 +62,15 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
     <script src="./estilo.js" type="text/javascript" defer></script>
     <link rel="stylesheet" href="./css/dd_cliente.css">
 
-    <style>#erro_cadastro {
+    <style>
+    #erro_cadastro {
     color: red;
     font-size: 15px;
     margin-left: -2px;
     margin-top: -20px;
     margin-bottom: 10px;
-    display: <?php echo $dis ?>;
-    }</style>
+    display: <?php echo $dis ?>;}
+    </style>
 
     <title>Cadastro cliente</title>
 </head>
@@ -104,7 +105,7 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
                             <input type="hidden" name="formulario" value="cadastrar-cliente">
                     <ul id="ul-cadastro">
                     <li >
-                            <input class="li-cadastro" type="text" value="<?php echo $user_data['usuario'] ?>" name="representante"  placeholder="Nome representante" required>
+                            <input class="li-cadastro" type="text" value="<?php echo $user_data['usuario'] ?>" name="representante"  placeholder="Nome representante - <?php echo $user_data['usuario'] ?>" required>
                         </li> 
                         <li >
                             <input class="li-cadastro" type="text" placeholder="Nome do clienter" name="cliente" required>
@@ -171,7 +172,7 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
                         <div id="box-cadastro">
                             <li>
                                 <input class="li-cadastro-box" type="radio" value="Homem" name="genero" required>
-                                <label>Home</label>
+                                <label>Homem</label>
                             
                                 <input class="li-cadastro-box" type="radio" value="Mulher" name="genero" required>
                                 <label>Mulher</label>
