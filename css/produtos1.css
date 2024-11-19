@@ -1,0 +1,251 @@
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+   }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 0, 255), rgb(0, 100, 255) , rgb(0, 0, 100)90%); 
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+
+@keyframes colors {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+#menu {
+    width: 100%;
+    height:100px;   
+    background: rgba(0, 0, 62, 0.2);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#img_home {
+    position: absolute;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#usuario_d_login {
+    position: absolute;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#usuario_d_login img{
+    width: 25px;
+    margin-right: 5px;
+}
+
+#usuario_d_login h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#usuario_d_login h2 {
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+border: 2px solid wheat;
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+#usuario_d_login h2:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+#usuario_d_login a {
+    color: white;
+    text-decoration: none ;
+}
+
+#img-logo {
+    width: 250px;
+
+    
+}
+
+section {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 190px;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+#div_pesquisa{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+
+}
+
+#div_pesquisa input {
+    background: white;
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    border-radius: 10px;
+    color: black;
+    margin-right: -6px;
+}
+
+#div_pesquisa #botao {
+    background: url(../img/pesquisa.svg) no-repeat yellow;
+    filter: invert(1);
+    width: 50px;
+    height: 33px;
+    margin: 0;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    cursor: pointer;
+    border: 4px solid yellow;
+    margin-left: -6px;
+}
+
+#div_pesquisa #botao:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    border: 4px solid yellow;
+    border-radius: 10px;
+}
+
+#tabela {
+    width: 85%;
+    min-width: 1100px;
+    border-collapse: collapse;
+    box-shadow: 0px 5px 10px rgba(0, 0, 50);
+    border: 1px solid #ededed;
+    color: rgb(229, 229, 229);
+    text-align: center;
+    background: rgb(0, 0, 50);
+}
+
+#titulo {
+    background: blue;
+    height: 50px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: none;
+    color: wheat;
+    border: none;
+    outline: none;
+}
+
+
+tr {
+    border-bottom: 1px solid rgb(255, 255, 255) ;
+}
+
+.W80 {
+    width: 80px;
+}
+
+#add {
+    position: absolute;
+    left: 5px;
+    top: 300px;
+}
+
+#add button {
+    background: rgb(0, 0, 50);
+    border: none;
+    border: 1px solid white;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#add button:hover {
+    transition: 0.5s;
+    font-weight: bold;
+    border: 2px solid white;
+    background: blue;
+    transform: scale(1);
+}
+
+input.excluir {
+    height: 15px;
+}
+
+#salvar {
+    width: 60;
+    height: 30px;
+    text-align: center;
+    background: none;
+    color: wheat;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-style: oblique;
+}
+
+#salvar:hover {
+    transition: 0.5s;
+    font-weight: bold;
+    border: 2px solid white;
+    background: rgb(0, 223, 0);
+    transform: scale(1);
+    
+}
+
+.rodape{
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+}
+.rodape p{
+    width: 100%;
+    font-size: 11px;
+    position: absolute;
+    bottom: -11px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+
+.rodape:hover {
+    transition: 1s;
+    background-color: gray;
+    color: white;
+}

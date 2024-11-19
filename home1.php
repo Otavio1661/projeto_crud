@@ -81,7 +81,7 @@ $user_data = mysqli_fetch_assoc($result);
             <a href="./produtos.php">
             <div class="img-home">
                 <img src="./img/produtos.png" alt="">
-                <p>Produtos do Representante</p>
+                <p>Produtos</p>
             </div>
             </a>
             <div class="img-home">

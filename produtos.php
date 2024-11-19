@@ -11,89 +11,69 @@ $user_data = mysqli_fetch_assoc($result);
 // echo '<pre>$user_data<br />'; var_dump($user_data); echo '</pre>';
 
 //------------------------------------------------------------------------------------------------
-$sql = "SELECT * FROM tabela_cliente c WHERE c.representante = '" . $user_data['usuario'] . "'";
+$sql = "SELECT * FROM produtos c ";
 
 $res = $connect->query($sql);
 
+
 if (isset($_POST["EXCLUIR"])) {
     
-    $sql = "DELETE FROM tabela_cliente WHERE id = " . $_REQUEST['id'] ;
+    $sql = "DELETE FROM produtos WHERE produto = '" . $_POST['produto']. "'" ;
+    $del = $connect->query($sql);
 
-    $res = $connect->query($sql);
-
+    echo "<script>location.href= 'produtos.php'</script>;";
+  
 }
 
+
 if (isset($_POST["UPDATE_formulario"])) {
-    // echo 'aki 1'; exit; 
-
-    
-
+ 
     switch ($_POST["UPDATE_formulario"]) {
-        case 'cadastrar_cliente':
-            $id = $_POST['id'];
-            $cliente = $_POST["cliente"];
-            $email = $_POST["email"];
-            $telefone = $_POST["telefone"];
-            $uf = $_POST["uf"];
-            $cidade = $_POST["cidade"];
-            $bairro = $_POST["bairro"];
-            $rua_av = $_POST["rua_av"];
-            $nu = $_POST["nu"];
+        case 'cadastrar-produto':
+            $produto = $_POST["produto"];
+            $categoria = $_POST["categoria"];
+            $n_interno = $_POST["n_interno"];
+            $val_d_custo = $_POST["val_d_custo"];
+            $val_d_venda = $_POST["val_d_venda"];
+            $und_estoque = $_POST["und_estoque"];
 
 
-            
-    //  echo 'aki 2';exit;
-            $sql = "UPDATE tabela_cliente SET 
-                    cliente = '$cliente' , 
-                    email = '$email', 
-                    telefone = '$telefone', 
-                    uf = '$uf', 
-                    cidade = '$cidade', 
-                    bairro = '$bairro', 
-                    rua_av = '$rua_av', 
-                    nu = '$nu'
-                            WHERE id = '{$id}'";
+            $sql = "UPDATE produtos SET
+                    categoria = '$categoria', 
+                    n_interno = '$n_interno', 
+                    val_d_custo = '$val_d_custo', 
+                    val_d_venda = '$val_d_venda', 
+                    und_estoque = '$und_estoque' 
+                            WHERE produto = '$produto'";
                     
-        // case 'excluir' :
-        //     $EXCLUIR = $_POST
-    //   echo$sql;exit;
-
-
             $res = $connect->query($sql);
-            // echo 'aki 2';exit;
 
             if ($res == true) {
-    //  echo 'aki 2';exit;
 
-                echo "<script>location.href= 'central_cliente.php'</script>;";
-    //  1echo 'aki 2';exit;
+                echo "<script>location.href= 'produtos.php'</script>;";
 
             }
     }
 
-
-    
 }
 
 
-if (isset($_POST["pesquisar"]) && ($pesquisa = $_POST["pesquisa"]) ) {
-        // print_r($_POST); die;
-        // var_dump($user_data['usuario']);
-$sql = "SELECT *
-    FROM tabela_cliente c 
-    WHERE c.representante = '". $user_data['usuario'] . "'
-        AND c.id LIKE '%$pesquisa%'
-        OR c.cliente LIKE '%$pesquisa%'
-        OR c.email LIKE '%$pesquisa%'
-        OR c.telefone LIKE '%$pesquisa%'
-        OR c.cpf_cnpj_cliente LIKE '%$pesquisa%'
-        OR c.uf LIKE '%$pesquisa%'
-        OR c.cidade LIKE '%$pesquisa%'
-        OR c.bairro LIKE '%$pesquisa%'
-        OR c.rua_av LIKE '%$pesquisa%'
-        OR c.nu LIKE '%$pesquisa%'
-        OR c.genero LIKE '%$pesquisa%'";
+if (isset($_POST["pesquisar"]) && ($pesquisa = $_POST["pesquisar"]) ) {
+        
+print_r($_POST); die;
 
+$sql = "SSELECT *
+    FROM produtos c
+    WHERE 
+        c.id LIKE '%pesquisa%' 
+        OR c.produto LIKE '%pesquisa%' 
+        OR c.categoria LIKE '%pesquisa%' 
+        OR c.n_interno LIKE '%pesquisa%' 
+        OR c.val_d_custo LIKE '%pesquisa%' 
+        OR c.val_d_venda LIKE '%pesquisa%'
+        OR c.und_estoque LIKE '%pesquisa%'";
+
+        
 $res = $connect->query($sql);
  
 $return_data = mysqli_fetch_assoc($res);
@@ -112,9 +92,9 @@ $res = $connect->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <link rel="stylesheet" href="./css/central_cliente2.css">
+    <link rel="stylesheet" href="./css/produtos1.css">
 
-    <title>Home Gazin</title>
+    <title>Produtos</title>
 </head>
 
 <body>
@@ -133,8 +113,8 @@ $res = $connect->query($sql);
         </div>
 
         <div id="div_pesquisa"> 
-        <form action="central_cliente.php" id="pesquisar" method="POST">
-            <input type="hidden" name="pesquisa" value="pesuisa">
+        <form action="produtos.php" id="pesquisar" method="POST">
+            <input type="hidden" name="pesquisa" value="pesquisa">
             <input type="text" placeholder="Pesquisar.." name="pesquisa"> <input id="botao" type="submit" name="pesquisar" value=""></input>
             </form>
         </div>
@@ -145,6 +125,10 @@ $res = $connect->query($sql);
 
 
     <section>
+
+        <div id="add"> 
+            <a href="add_produto.php"><button>Adicionar</button></a>
+        </div>
                 
         <table id="tabela">
             <tr id="titulo">
@@ -155,6 +139,8 @@ $res = $connect->query($sql);
                 <td>Val. d. custo</td>
                 <td>Valor d. venda</td>
                 <td>Und. estoque</td>
+                <td class="W80">EXCLUIR</td>
+                <td class="W80">SALVAR</td>
             </tr>
 
 
@@ -165,19 +151,24 @@ $res = $connect->query($sql);
                     echo "<tr>";
             ?>
 
-<form action="central_cliente.php" id="cadastrar_cliente" method="POST">
-                        <input type="hidden" name="UPDATE_formulario" value="cadastrar_cliente"><br>
+<form action="produtos.php" id="cadastrar-produto" method="POST">
+            <input type="hidden" name="UPDATE_formulario" value="cadastrar-produto"><br>
 
-                        <td> <input> </td>
-                        <td> <input> </td>
-                        <td> <input> </td>
-                        <td> <input> </td>
-                        <td> <input> </td>
-                        <td> <input> </td>
-                        <td> <input> </td>
+                        <td> <input value="<?php echo $row['id']; ?>" id="id" name="id" disabled> </td>
+                        <td> <input value="<?php echo $row['produto']; ?>" type="text" name="produto" required> </td>
+                        <td> <select name="categoria"><br>
+                            <option ><?php echo $row['categoria']; ?></option>
+                            <option value="eletro" required>Eletro</option>
+                            <option value="industria" required>Indústria</option>
+                        </select> </td>
+                        <td> <input value="<?php echo $row['n_interno']; ?>" type="tel" name="n_interno" required><br> </td>
+                        <td> <input value="<?php echo $row['val_d_custo']; ?>" type="tel" name="val_d_custo" required><br> </td>
+                        <td>  <input value="<?php echo $row['val_d_venda']; ?>" type="tel" name="val_d_venda" required><br> </td>
+                        <td>  <input value="<?php echo $row['und_estoque']; ?>" id="u_e_e" type="number" name="und_estoque" required><br> </td>
+                        <td> <input class="excluir" type='checkbox' name="EXCLUIR"> </td> 
                         <td><button type="submit" id="salvar" name="submit">SALVAR</button></td> 
 
-                        <input type="hidden" name="UPDATE_formulario" value="cadastrar_cliente">
+                        <input type="hidden" name="UPDATE_formulario" value="cadastrar-produto">
 </form>
 
                     <?php

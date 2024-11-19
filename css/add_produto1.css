@@ -1,0 +1,191 @@
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+   }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 0, 255), rgb(0, 100, 255) , rgb(0, 0, 100)90%); 
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+
+@keyframes colors {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+#menu {
+    width: 100%;
+    height:100px;   
+    background: rgba(0, 0, 62, 0.2);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#img_home {
+    position: absolute;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#usuario_d_login {
+    position: absolute;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#usuario_d_login img{
+    width: 25px;
+    margin-right: 5px;
+}
+
+#usuario_d_login h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#usuario_d_login h2 {
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+border: 2px solid wheat;
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+#usuario_d_login h2:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+#usuario_d_login a {
+    color: white;
+    text-decoration: none ;
+}
+
+#img-logo {
+    width: 250px;
+
+    
+}
+
+section {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 190px;
+}
+
+section img {
+    width: 100px;
+    filter: invert(1);
+}
+
+label {
+    color:  white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#add_produto {
+    background: rgba(0, 0, 50);
+    width: 400px;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 50);
+    border-radius: 10px;
+}
+
+#add_produto input {
+    width: 350px;
+    height: 30px;
+    border: 1px solid white;
+    background: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: white;
+    font-weight: bold;
+}
+
+#add_produto button {
+    width: 300px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 50);
+}
+
+#add_produto button:hover {
+    transition: 0.5s;
+    font-weight: bold;
+    background: rgb(0, 223, 0);
+    border: 2px solid white;
+    transform: scale(1.1);
+    color: white;
+}
+
+#add_produto select {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    margin: 5px 0 10px 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.rodape{
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+}
+.rodape p{
+    width: 100%;
+    font-size: 11px;
+    position: absolute;
+    bottom: -11px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+
+.rodape:hover {
+    transition: 1s;
+    background-color: gray;
+    color: white;
+}
+

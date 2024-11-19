@@ -148,6 +148,7 @@ form {
     min-width: 1100px;
     border-collapse: collapse;
     border: 1px solid #ededed;
+    box-shadow: 0px 5px 10px rgba(0, 0, 50);
     color: rgb(229, 229, 229);
     text-align: center;
     background: rgb(0, 0, 50);
