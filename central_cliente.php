@@ -103,36 +103,6 @@ $res = $connect->query($sql);
 
 ?>
 
-<!-- <script>
-
-const inputBusca = document.getElementById('input-busca');
-const tabelaFuncionarios = document.getElementById('tabela');
-
-inputBusca.addEventListener('keyup', () => {
-    let expressao = inputBusca.value;
-
-    let linhas = tabelaFuncionarios.getElementsByTagName('tr');
-
-    console.log(linhas)
-    for (let posicao in linhas){
-        if (true === isNaN(posicao)) {
-            continue;
-        }
-
-        let conteudoDalinha = linhas[posicao].innerHTML;
-
-        if (true === conteudoDalinha.includes(expressao)) {
-            linhas[posicao].style.display = '';
-        } else {
-            linhas[posicao].style.display = 'none';
-        }
-    }
-});
-
-</script> -->
-
-
-
 <!DOCTYPE html>
 <html lang="br-pt">
 
@@ -141,9 +111,9 @@ inputBusca.addEventListener('keyup', () => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <link rel="stylesheet" href="./css/central_cliente1.css">
+    <link rel="stylesheet" href="./css/central_cliente.css">
 
-    <title>Home Gazin</title>
+    <title>Central do cliente</title>
 </head>
 
 <body>
@@ -158,11 +128,12 @@ inputBusca.addEventListener('keyup', () => {
         <div id="usuario_d_login">
             <img src="./img/login.svg" alt="">
             <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
-            <h2><a href="./home1.php">Voltar</a></h2>
+            <h2><a href="./home.php">Voltar</a></h2>
         </div>
 
         <div id="div_pesquisa"> 
         <form action="central_cliente.php" id="pesquisar" method="POST">
+            <h1>Central do cliente</h1>
             <input type="hidden" name="pesquisa" value="pesuisa">
             <input type="text" placeholder="Pesquisar.." name="pesquisa"> <input id="botao" type="submit" name="pesquisar" value=""></input>
             </form>

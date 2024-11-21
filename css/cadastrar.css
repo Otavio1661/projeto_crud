@@ -1,3 +1,4 @@
+
 html, body {
     overflow: hidden;
    }
@@ -7,7 +8,7 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, rgb(0, 224, 240), rgb(0, 2, 119)90%);
+    background: linear-gradient(45deg, rgb(0, 0, 255), rgb(0, 90, 170) , rgb(0, 0, 100)90%); 
 }
 
 
@@ -29,57 +30,69 @@ body{
 }
 
 
-#menu-login {
+#menu-cadastro {
     width: 400px;
     height: auto;
     margin: 0;
-    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
     border-radius: 10px;
-
+    box-shadow: 0 5px 20px rgb(0, 0, 50);
 }
 
-#ul-login {
+#ul-cadastro {
     list-style-type: none;
     padding: 30px;
 }
 
-
-.li-login {
+.li-cadastro {
     width: 300px;
-    height: 40px;
+    height: 35px;
     margin-bottom: 30px;
     border-radius: 10px;
     padding: 0 0 0 10px;
-    font-size: 20px;
+    font-size: 15px;
     border: none;
     outline: none;
+    box-shadow: 0 5px 5px rgb(0, 0, 50);
 }
 
-.li-n-cadastro {
+.li-cadastro-box {
+    width: 35px;
+    height: 15px;
+}
+
+#box-cadastro {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 5px;
+}
+
+label {
+    color: white;
+}
+
+.li-s-casdastro {
     color: rgba(255, 255, 255, 0.836);
     margin: 0;
     margin-top: 20px;
 }
-.li-n-cadastro a {
+.li-s-casdastro a {
     color: rgb(17, 0, 255);
     text-decoration: none;
 }
-.li-n-cadastro a:hover {
+.li-s-casdastro a:hover {
     transition: 0.5s;
     color: rgb(255, 255, 255);
 }
 
-#erro-login {
-    display: none;
-    color: red;
-    font-size: 20px;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
 
-#button-login {
+
+#button-cadastro {
     width: 200px;
-    height: 40px;
+    height: 35px;
     border-radius: 10px;
     font-size: 20px;
     color:  rgb(1, 0, 58);
@@ -87,9 +100,10 @@ body{
     cursor: pointer;
     border: none;
     outline: none;
+    box-shadow: 0 5px 5px rgb(0, 0, 50);
 }
 
-#button-login:hover {
+#button-cadastro:hover {
     transition: 0.5s;
     background: rgb(3, 0, 160);
     color: white;
@@ -118,4 +132,5 @@ body{
     background-color: gray;
     color: white;
 }
+
 

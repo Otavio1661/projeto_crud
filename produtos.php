@@ -58,20 +58,20 @@ if (isset($_POST["UPDATE_formulario"])) {
 }
 
 
-if (isset($_POST["pesquisar"]) && ($pesquisa = $_POST["pesquisar"]) ) {
+if (isset($_POST["pesquisar"]) && ($pesquisa = $_POST["pesquisa"]) ) {
         
-print_r($_POST); die;
+// print_r($_POST); die;
 
-$sql = "SSELECT *
+$sql = "SELECT *
     FROM produtos c
     WHERE 
-        c.id LIKE '%pesquisa%' 
-        OR c.produto LIKE '%pesquisa%' 
-        OR c.categoria LIKE '%pesquisa%' 
-        OR c.n_interno LIKE '%pesquisa%' 
-        OR c.val_d_custo LIKE '%pesquisa%' 
-        OR c.val_d_venda LIKE '%pesquisa%'
-        OR c.und_estoque LIKE '%pesquisa%'";
+        c.id LIKE '%$pesquisa%' 
+        OR c.produto LIKE '%$pesquisa%' 
+        OR c.categoria LIKE '%$pesquisa%' 
+        OR c.n_interno LIKE '%$pesquisa%' 
+        OR c.val_d_custo LIKE '%$pesquisa%' 
+        OR c.val_d_venda LIKE '%$pesquisa%'
+        OR c.und_estoque LIKE '%$pesquisa%'";
 
         
 $res = $connect->query($sql);
@@ -92,7 +92,7 @@ $res = $connect->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <link rel="stylesheet" href="./css/produtos1.css">
+    <link rel="stylesheet" href="./css/produtos.css">
 
     <title>Produtos</title>
 </head>
@@ -109,10 +109,11 @@ $res = $connect->query($sql);
         <div id="usuario_d_login">
             <img src="./img/login.svg" alt="">
             <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
-            <h2><a href="./home1.php">Voltar</a></h2>
+            <h2><a href="./home.php">Voltar</a></h2>
         </div>
 
         <div id="div_pesquisa"> 
+            <h1>Produtos</h1>
         <form action="produtos.php" id="pesquisar" method="POST">
             <input type="hidden" name="pesquisa" value="pesquisa">
             <input type="text" placeholder="Pesquisar.." name="pesquisa"> <input id="botao" type="submit" name="pesquisar" value=""></input>
@@ -192,11 +193,6 @@ $res = $connect->query($sql);
     </footer>
 
     <!-- /rodape -->
-
-    <script>
-        $('.CLL').mask('(00) 0000-0000');
-        $('.CPF').mask('000.000.000-00');
-    </script>
 
 </body>
 

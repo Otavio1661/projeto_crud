@@ -18,7 +18,7 @@
         if (mysqli_num_rows($result) == 1)
         {
             $_SESSION['cpf_cnpj'] = $cpf_cnpj;
-            header('Location: home1.php');
+            header('Location: home.php');
         }
         if (mysqli_num_rows($result) == 0)
         {
@@ -36,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <link rel="stylesheet" href="./css/estilo_index.css">
+    <link rel="stylesheet" href="./css/index.css">
 
     <title>Logn Gazin</title>
 </head>

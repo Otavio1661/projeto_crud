@@ -35,6 +35,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: center;
+    box-shadow: 0 5px 50px rgb(0, 0, 50);
 }
 
 #img_home {
@@ -92,133 +93,79 @@ border-radius: 5px;
 
 section {
     width: 100%;
-    height: 55%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 190px;
 }
 
-form {
-    margin: 0;
-    padding: 0;
+section img {
+    width: 100px;
+    filter: invert(1);
 }
 
-#div_pesquisa{
+label {
+    color:  white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#add_produto {
+    background: rgba(0, 0, 50);
+    width: 400px;
+    height:auto;
     display: flex;
     justify-content: center;
-    height: 100%;
     align-items: center;
-
-}
-
-#div_pesquisa input {
-    background: white;
-    width: 200px;
-    height: 30px;
-    margin: 0;
-    border-radius: 10px;
-    color: black;
-    margin-right: -6px;
-}
-
-#div_pesquisa #botao {
-    background: url(../img/pesquisa.svg) no-repeat yellow;
-    filter: invert(1);
-    width: 50px;
-    height: 33px;
-    margin: 0;
-    border: 0;
-    border-radius: 0 10px 10px 0;
-    outline: none;
-    cursor: pointer;
-    border: 4px solid yellow;
-    margin-left: -6px;
-}
-
-#div_pesquisa #botao:hover {
-    transition: 0.5s;
-    transform: scale(1.1);
-    border: 4px solid yellow;
-    border-radius: 10px;
-}
-
-#tabela {
-    width: 85%;
-    min-width: 1100px;
-    border-collapse: collapse;
-    border: 1px solid #ededed;
-    box-shadow: 0px 5px 10px rgba(0, 0, 50);
-    color: rgb(229, 229, 229);
-    text-align: center;
-    background: rgb(0, 0, 50);
-}
-
-#titulo {
-    background: blue;
-    height: 50px;
-}
-
-input {
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    background: none;
-    color: wheat;
-    border: none;
-    outline: none;
-}
-
-
-.excluir {
-    height: 15px;
-}
-
-.w150 {
-    width: 150px;
-}
-
-.w105 {
-    width: 105px;
-}
-
-.w80 {
-    width: 80px;
-}
-
-tr {
-    border-bottom: 1px solid rgb(255, 255, 255) ;
-}
-
-#li-select {   
-    width: 50px;
-    height: 30px;
-    border-radius: 10px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-}
-
-
-#salvar {
-    width: 60;
-    height: 30px;
-    text-align: center;
-    background: none;
-    color: wheat;
     border: 1px solid white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-style: oblique;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 50);
+    border-radius: 10px;
 }
 
-#salvar:hover {
+#add_produto input {
+    width: 350px;
+    height: 30px;
+    border: 1px solid white;
+    background: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: white;
+    font-weight: bold;
+}
+
+#add_produto button {
+    width: 300px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 50);
+}
+
+#add_produto button:hover {
     transition: 0.5s;
     font-weight: bold;
     background: rgb(0, 223, 0);
     border: 2px solid white;
     transform: scale(1.1);
-    
+    color: white;
+}
+
+#add_produto select {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    margin: 5px 0 10px 5px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 .rodape{
@@ -242,3 +189,4 @@ tr {
     background-color: gray;
     color: white;
 }
+

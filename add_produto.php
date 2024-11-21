@@ -56,12 +56,12 @@ if (isset($_POST["formulario_produto"])) {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/add_produto1.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./css/add_produto.css">
 
-    <title>ADD Produstos</title>
+    <title>Cadastro Produstos</title>
 </head>
 
 <body>
@@ -76,7 +76,7 @@ if (isset($_POST["formulario_produto"])) {
         <div id="usuario_d_login">
             <img src="./img/login.svg" alt="">
             <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
-            <h2><a href="./home1.php">Voltar</a></h2>
+            <h2><a href="./produtos.php">Voltar</a></h2>
         </div>
 
     </header>
@@ -99,7 +99,7 @@ if (isset($_POST["formulario_produto"])) {
                         </div>
 
                         <label for="">Categoria: </label>
-                        <select name="categoria"><br>
+                        <select name="categoria" required><br>
                             <option >Selecionar</option>
                             <option value="eletro" required>Eletro</option>
                             <option value="industria" required>Indústria</option>
@@ -109,10 +109,10 @@ if (isset($_POST["formulario_produto"])) {
                         <input type="tel" name="n_interno" required><br>
 
                         <label for="">Valor de custo</label>
-                        <input type="tel" name="val_d_custo" required><br>
+                        <input type="tel" class="real" name="val_d_custo" required><br>
 
                         <label for="">Valor de venda</label>
-                        <input type="tel" name="val_d_venda" required><br>
+                        <input type="tel" class="real" name="val_d_venda" required><br>
 
                         <label for="">Undade em estoque</label>
                         <input id="u_e_e" type="number" name="und_estoque" required><br>
@@ -140,5 +140,6 @@ if (isset($_POST["formulario_produto"])) {
     <!-- /rodape -->
 
 </body>
+
 
 </html>

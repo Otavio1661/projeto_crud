@@ -47,7 +47,7 @@ if (isset($_POST["formulario"])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="./js/cadastro.js" type="text/javascript" defer></script>
-    <link rel="stylesheet" href="./css/estilo_cadastro1.css">
+    <link rel="stylesheet" href="./css/cadastrar.css">
 
     <style>#erro_cadastro {
     color: red;

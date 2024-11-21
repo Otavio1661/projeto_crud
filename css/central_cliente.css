@@ -35,6 +35,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: center;
+    box-shadow: 0 5px 50px rgb(0, 0, 50);
 }
 
 #img_home {
@@ -105,12 +106,19 @@ form {
 }
 
 #div_pesquisa{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    height: 100%;
     align-items: center;
-
 }
+
+#div_pesquisa h1 {
+    color: white;
+    margin-top: -5px;
+    margin-left: -10px;
+}
+
 
 #div_pesquisa input {
     background: white;
@@ -120,6 +128,7 @@ form {
     border-radius: 10px;
     color: black;
     margin-right: -6px;
+    margin-top: -10px;
 }
 
 #div_pesquisa #botao {
@@ -147,8 +156,8 @@ form {
     width: 85%;
     min-width: 1100px;
     border-collapse: collapse;
-    box-shadow: 0px 5px 10px rgba(0, 0, 50);
     border: 1px solid #ededed;
+    box-shadow: 0px 5px 10px rgba(0, 0, 50);
     color: rgb(229, 229, 229);
     text-align: center;
     background: rgb(0, 0, 50);
@@ -170,42 +179,35 @@ input {
 }
 
 
+.excluir {
+    height: 15px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w105 {
+    width: 105px;
+}
+
+.w80 {
+    width: 80px;
+}
+
 tr {
     border-bottom: 1px solid rgb(255, 255, 255) ;
 }
 
-.W80 {
-    width: 80px;
-}
-
-#add {
-    position: absolute;
-    left: 5px;
-    top: 300px;
-}
-
-#add button {
-    background: rgb(0, 0, 50);
-    border: none;
-    border: 1px solid white;
-    width: 100px;
-    height: 35px;
+#li-select {   
+    width: 50px;
+    height: 30px;
     border-radius: 10px;
-    color: white;
-    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    outline: none;
 }
 
-#add button:hover {
-    transition: 0.5s;
-    font-weight: bold;
-    border: 2px solid white;
-    background: blue;
-    transform: scale(1);
-}
-
-input.excluir {
-    height: 15px;
-}
 
 #salvar {
     width: 60;
@@ -222,9 +224,9 @@ input.excluir {
 #salvar:hover {
     transition: 0.5s;
     font-weight: bold;
-    border: 2px solid white;
     background: rgb(0, 223, 0);
-    transform: scale(1);
+    border: 2px solid white;
+    transform: scale(1.1);
     
 }
 

@@ -29,7 +29,7 @@ if (isset($_POST["formulario"])) {
             $res = $connect->query($sql);
 
             if ($res == true) {
-                echo "<script>location.href= 'home1.php'</script>;";
+                echo "<script>location.href= 'home.php'</script>;";
             } if ($res == 0) {
                 
                 $dis = "block";
@@ -60,7 +60,7 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="./estilo.js" type="text/javascript" defer></script>
-    <link rel="stylesheet" href="./css/dd_cliente.css">
+    <link rel="stylesheet" href="./css/cadastrar_cliente.css">
 
     <style>
     #erro_cadastro {
@@ -82,16 +82,17 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
         <div id="img_home">
             <img src="./img/logo-gazin.png" id="img-logo">
         </div>
-        
-            <div id="usuario_d_login">
-                <h1><a href="./home1.php">Voltar</a></h1>
-            </div>
 
-        <div>
-
-            
-
+        <div id="usuario_d_login">
+            <img src="./img/login.svg" alt="">
+            <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
+            <h2><a href="./home.php">Voltar</a></h2>
         </div>
+
+        <div id="estou_aqui"> 
+        <h1>>> Cadastro cliente <<</h1>
+        </div>
+
     </header>
 
     <!-- /menu -->
@@ -101,7 +102,7 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
     <section id="center-vertical"> 
         <center>
             <div id="center-vertical2">
-                <form action="dd_cliente.php" id="menu-cadastro" method="POST">
+                <form action="cadastrar_cliente.php" id="menu-cadastro" method="POST">
                             <input type="hidden" name="formulario" value="cadastrar-cliente">
                     <ul id="ul-cadastro">
                     <li >
@@ -121,7 +122,7 @@ $sql = "SELECT c.usuario FROM cadastro c WHERE c.cpf_cnpj = '" . $_SESSION['cpf_
                             <input class="li-cadastro CPF" type="tel" placeholder="CPF/CNPJ" name="cpf_cnpj_cliente" required>
                         </li>
                         <div id="erro_cadastro"> 
-                            Cadastro de CPF/CNPJ já existente
+                            CPF/CNPJ já cadastrado  
                         </div>
                         <li>
                             <div id="selecao_uf">

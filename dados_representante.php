@@ -38,7 +38,7 @@ if (isset($_POST["UPDATE_formulario"])) {
             $res = $connect->query($sql);
 
             if ($res = true) {
-                echo "<script>location.href= 'home1.php'</script>;";
+                echo "<script>location.href= 'home.php'</script>;";
             }
     }
 }
@@ -57,10 +57,10 @@ if (isset($_POST["UPDATE_formulario"])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="./estilo.js" type="text/javascript" defer></script>
-    <link rel="stylesheet" href="./css/dados_representante2.css">
+    <link rel="stylesheet" href="./css/dados_representante.css">
 
 
-    <title>Cadastro cliente</title>
+    <title>Dados do Representante</title>
 </head>
 <body>
 
@@ -70,16 +70,17 @@ if (isset($_POST["UPDATE_formulario"])) {
         <div id="img_home">
             <img src="./img/logo-gazin.png" id="img-logo">
         </div>
-        
-            <div id="usuario_d_login">
-                <h1><a href="./home1.php">Voltar</a></h1>
-            </div>
 
-        <div>
-
-            
-
+        <div id="usuario_d_login">
+            <img src="./img/login.svg" alt="">
+            <h1>Perfil: <?php echo $user_data['usuario'] ?> </h1>
+            <h2><a href="./home.php">Voltar</a></h2>
         </div>
+
+        <div id="estou_aqui"> 
+        <h1>>> Dados do Representante <<</h1>
+        </div>
+
     </header>
 
     <!-- /menu -->
