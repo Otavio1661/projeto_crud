@@ -1,18 +1,29 @@
-# Projeto CRUD Simples
-Este é um projeto simples de CRUD (Create, Read, Update, Delete) onde explorei conceitos básicos de PHP, integração com banco de dados MySQL e o uso do XAMPP como servidor local. O objetivo principal foi colocar em prática meus conhecimentos adquiridos em PHP, MySQL e manipulação de bancos de dados.
+---
 
-A interface foi desenvolvida com HTML e CSS, garantindo uma experiência de usuário simples e acessível. Além disso, implementei algumas máscaras e validações utilizando JavaScript para aprimorar a usabilidade do sistema.
+# CRUD Simples - Sistema de Cadastro de Representantes, Clientes e Produtos
 
-# Como Visualizar o Projeto
-Para visualizar o projeto em sua máquina local, siga os passos abaixo:
+Este é um projeto simples de **CRUD** (Create, Read, Update, Delete) desenvolvido em **PHP** com integração com banco de dados **MySQL** e utilizando o **XAMPP** como servidor local. O projeto permite que o usuário registre **representantes**, **clientes** e **produtos**, além de poder editar os dados de ambos os registros.
 
-1 - Baixe o arquivo do projeto e extraia-o para o seu ambiente de desenvolvimento.
+A interface foi desenvolvida utilizando **HTML** e **CSS**, proporcionando uma experiência simples e acessível ao usuário. Também implementei **máscaras** e **validações** utilizando **JavaScript** para melhorar a usabilidade e garantir dados corretos.
 
-2 - Crie as tabelas no seu banco de dados MySQL, e execute o arquivo 'sql_dados' em seu banco de dados, ou utilize os comandos SQL a seguir:
+## Funcionalidades
 
-Copie e cole no seu banco de dados!
+- Cadastro e edição de **representantes**, **clientes** e **produtos**.
+- Exibição de informações cadastradas.
+- Edição e remoção de registros.
+- Validações e máscaras de entrada para garantir dados corretos.
 
-# Códigos para ciarção das tabelas #
+## 🚀 Como Rodar o Projeto
+
+1. **Baixe o repositório**:
+   - Baixe o arquivo do projeto e extraia-o para o seu ambiente de desenvolvimento.
+
+2. **Configuração do Banco de Dados**:
+   - Crie as tabelas no seu banco de dados MySQL e execute o arquivo `sql_dados.sql` ou use os seguintes comandos SQL para criar as tabelas e os índices:
+
+### Códigos para criação das tabelas:
+
+```sql
 CREATE TABLE `cadastro` (
   `id` int(11) NOT NULL,
   `usuario` varchar(100) NOT NULL,
@@ -28,8 +39,6 @@ CREATE TABLE `cadastro` (
   `nu` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-#  #
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
   `produto` varchar(250) NOT NULL,
@@ -40,8 +49,6 @@ CREATE TABLE `produtos` (
   `und_estoque` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-#  #
 CREATE TABLE `suporte` (
   `id` int(11) NOT NULL,
   `representante` varchar(150) NOT NULL,
@@ -51,8 +58,6 @@ CREATE TABLE `suporte` (
   `area` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-#  #
 CREATE TABLE `tabela_cliente` (
   `id` int(11) NOT NULL,
   `representante` varchar(100) NOT NULL,
@@ -67,39 +72,64 @@ CREATE TABLE `tabela_cliente` (
   `nu` varchar(50) NOT NULL,
   `genero` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
 
-# Códigos para os índices #
+### Códigos para os índices:
+
+```sql
 ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique_email` (`email`),
   ADD UNIQUE KEY `unique_cpf_cnpj` (`cpf_cnpj`); 
 
-#  #
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique` (`produto`) USING BTREE;
 
-#  #
 ALTER TABLE `suporte`
   ADD PRIMARY KEY (`id`);
 
-#  #
 ALTER TABLE `tabela_cliente`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique_cpf_cnpj` (`cpf_cnpj_cliente`) USING BTREE;
 
-#  #
 ALTER TABLE `cadastro`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
-#  #
 ALTER TABLE `produtos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
-#  #
 ALTER TABLE `suporte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
-#  #
 ALTER TABLE `tabela_cliente`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+```
+
+3. **Execute o servidor local**:
+   - Utilize o **XAMPP** para rodar o servidor local e acesse a aplicação através do **PHP**.
+   - Coloque o projeto dentro da pasta `htdocs` do XAMPP e inicie o servidor Apache e MySQL.
+
+4. **Acesse o Projeto**:
+   - Após rodar o servidor, abra o navegador e acesse [http://localhost/nome_do_projeto](http://localhost/nome_do_projeto).
+
+## 🛠 Tecnologias Utilizadas
+
+- **PHP** (para o backend e manipulação do banco de dados)
+- **MySQL** (para o banco de dados)
+- **HTML** e **CSS** (para a interface do usuário)
+- **JavaScript** (para validações e máscaras de entrada)
+- **XAMPP** (para rodar o servidor local)
+
+## ⚠️ Requisitos
+
+- **XAMPP** instalado
+- **PHP** (>= 7.0)
+- **MySQL**
+- Navegador de internet
+
+## 📄 Licença
+
+Este projeto é de código aberto. Fique à vontade para usar e modificar conforme necessário.
+
+---
